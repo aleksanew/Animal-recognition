@@ -2,6 +2,12 @@ from flask import Flask, request, jsonify, render_template
 import numpy as np, cv2, base64
 from recognition import _load_bundle, preprocess_gray, featurize_gray, USE_CLAHE
 
+try:
+    from get_model import main as fetch_model
+    fetch_model()
+except Exception:
+    pass
+
 # ---- Load model & HOG once ----
 b, hog = _load_bundle()
 model, classes = b["model"], b["classes"]
