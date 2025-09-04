@@ -1,7 +1,7 @@
 import os, sys, pathlib, urllib.request
 
 MODEL = "catdog_hog_svm.joblib"
-URL   = "https://github.com/aleksanew/Animal-recognition/releases/download/v1.0/catdog_hog_svm.joblib"  # <-- your release URL
+URL   = "https://github.com/aleksanew/Animal-recognition/releases/download/v1.0/catdog_hog_svm.joblib"
 
 def main():
     if pathlib.Path(MODEL).exists():
