@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Data & models
+catdog_hog_svm.joblib
+*.jpg
+*.png
+*.jpeg
+# (remove the above line(s) if you DO want images; consider a /samples/ folder)
+
+# Env/config
+.env

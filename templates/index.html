@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Cat/Dog Recognizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+  <h1>Cat/Dog Recognizer</h1>
+  <p>Upload an image or use your camera.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Upload</h2>
+      <input id="file" type="file" accept="image/*"/>
+      <button onclick="sendUpload()">Predict</button>
+      <div id="uploadResult"></div>
+      <img id="uploadPreview" />
+    </div>
+
+    <div class="card">
+      <h2>Camera</h2>
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <div class="row">
+        <button class="muted" onclick="startCam()" id="startBtn">Start camera</button>
+        <button class="muted" onclick="stopCam()" id="stopBtn" disabled>Stop camera</button>
+        <button class="primary" onclick="capture()" id="captureBtn" disabled>Capture & Predict</button>
+      </div>
+      <div id="camResult" class="result"></div>
+      <img id="camPreview" />
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
